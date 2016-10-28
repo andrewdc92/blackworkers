@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
+    @user = User.new(user_params)
 
     if @user.save
 
@@ -48,6 +48,6 @@ end
 
   private
   def user_params
-    params.require(:user).permit(:name, :current_city, :email, :password)
+    params.require(:user).permit(:full_name, :current_city, :email, :password)
   end
 end
