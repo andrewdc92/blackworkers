@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-  </head>
-  <body>
     <center><h1>Instagram Lookup</h1></center>
       <% @posts.each do |post| %>
       <div class="col-sm-12 col-md-4">
         <div>
           <%= image_tag post.image, height: 400, width: 400 unless post.image.blank?  %>
-          <br>
-          <center><a href = <%= post.link %> class="btn btn-info"> Learn more about the artist... </a>
+          <center><a href=<%= post.link %> class="btn btn-info">Learn More  </a>
 
           <br> <br>
 
@@ -22,5 +13,4 @@
         </div>
     <% end %>
 
-  </body>
-</html>
+  
