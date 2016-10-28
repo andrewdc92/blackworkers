@@ -10,12 +10,32 @@
  // * files in this directory. Styles in this file should be added after the last require_* statement.
  // * It is generally better to create a new file per style scope.
  // *
+ @import url('https://fonts.googleapis.com/css?family=Six+Caps');
+ $six-caps: 'Six Caps', sans-serif;
+
  @import "bootstrap";
 
  .test {
   width: 350px;
 }
 
-#tatbtns {
+ h4 {
+  font-family: $six-caps;
+}
+
+#tatbtns,  {
   padding: 10px 0px 0px 0px;
+  background-color: black;
+  text-align: center;
+}
+
+#document {
+  background-color: black;
+  font-style: Six Caps;
+
+}
+
+html {
+  background-color: black;
+  font-style: Six Caps;
 }
