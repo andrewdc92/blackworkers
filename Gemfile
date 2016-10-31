@@ -21,7 +21,6 @@ gem 'jquery-rails'
 gem 'smarter_csv'
 gem 'responders'
 
-gem "react_on_rails", "~> 6"
 
 
 gem 'bootstrap', '~> 4.0.0.alpha5'
@@ -66,3 +65,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'mini_racer', platforms: :ruby
