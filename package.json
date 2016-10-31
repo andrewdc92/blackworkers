@@ -1,21 +1,16 @@
 {
-  "name": "blackworkers_app",
-  "version": "1.0.0",
-  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {},
+  "name": "react-webpack-rails-tutorial",
+  "version": "0.0.1",
+  "engines": {
+    "node": "5.10.0",
+    "npm": "3.5.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "cd client && npm install",
+    "rails-server": "echo 'visit http://localhost:3000/hello_world' && foreman start -f Procfile.dev",
+    "test": "rspec"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/andrewdc92/blackworkers.git"
-  },
-  "author": "andrew c",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/andrewdc92/blackworkers/issues"
-  },
-  "homepage": "https://github.com/andrewdc92/blackworkers#readme"
+  "dependencies": {
+    "react-bootstrap": "^0.30.6"
+  }
 }
