@@ -20,7 +20,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'smarter_csv'
 gem 'responders'
-gem 'react-rails'
 
 
 gem 'bootstrap', '~> 4.0.0.alpha5'
