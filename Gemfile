@@ -19,6 +19,9 @@ gem 'coffee-rails', '~> 4.2'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'smarter_csv'
+gem 'responders'
+gem 'react-rails'
+
 
 gem 'bootstrap', '~> 4.0.0.alpha5'
 
