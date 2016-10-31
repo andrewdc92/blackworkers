@@ -21,6 +21,7 @@ gem 'jquery-rails'
 gem 'smarter_csv'
 gem 'responders'
 
+gem "react_on_rails", "~> 6"
 
 
 gem 'bootstrap', '~> 4.0.0.alpha5'
