@@ -1,7 +1,7 @@
-var Navbar = ReactBootstrap.Navbar;
 
+import { Navbar } from 'react-bootstrap';
 
-const navbarInstance = (
+const NavContainer = (
   <Navbar>
     <Navbar.Header>
       <Navbar.Brand>
@@ -22,6 +22,9 @@ const navbarInstance = (
   </Navbar>
 );
 
+
+
+
 var mountNode = document.getElementById('navbar')
 
-ReactDOM.render(navbarInstance, mountNode);
+ReactDOM.render(<NavContainer />, mountNode);
