@@ -8,7 +8,6 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-node_modules/
 /log/*
 /tmp/*
 !/log/.keep
@@ -16,3 +15,9 @@ node_modules/
 
 # Ignore Byebug command history file.
 .byebug_history
+# React on Rails
+npm-debug.log*
+node_modules
+
+# Generated js bundles
+/app/assets/webpack/*
