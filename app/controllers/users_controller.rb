@@ -50,4 +50,8 @@ end
   def user_params
     params.require(:user).permit(:full_name, :current_city, :email, :password)
   end
+
+  def user_id
+    params[:id]
+  end
 end
