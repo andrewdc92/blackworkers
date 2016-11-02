@@ -10,11 +10,9 @@
 
     <body>
       <nav class="navbar navbar-light bg-faded">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="/"><img src="http://i.imgur.com/mjrYMQes.png"></a>
     <ul class="nav navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-      </li>
+      
       <% if current_user %>
       <li class="nav-item">
         <a class="nav-link" <%= link_to "Profile", user_path(current_user)%></a>
