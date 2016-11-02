@@ -1,7 +1,7 @@
 
-Post.destroy_all
 
-picture_data = [
+
+@posts = [
 
 {image:	"https://scontent-lga3-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c0.82.779.779/14717534_960019564131103_5479402564795498496_n.jpg?ig_cache_key=MTM3MDM4NTQ5ODg4NzA5NTQ1NA%3D%3D.2.c"	,	link:	"https://www.instagram.com/p/BMEllnCgwSe/?taken-by=blackworkers"	},
 {image:	"https://scontent-lga3-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/14677402_1212770778745226_4808491457268678656_n.jpg?ig_cache_key=MTM3MDM4NDI0OTEyNzA2OTIyOQ%3D%3D.2"	,	link:	"https://www.instagram.com/p/BMElTbHAmYt/?taken-by=blackworkers"	},
@@ -629,7 +629,11 @@ picture_data = [
 {image:	"https://scontent-lga3-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/13562042_1629131194070206_1265605313_n.jpg?ig_cache_key=MTI4ODA0Njg3NjQxMDU5MjA1OQ%3D%3D.2"	,	link:	"https://www.instagram.com/p/BHgD89KgTs7/?taken-by=blackworkers"	},
 ]
 
-artist_data = [
+@posts.each do |post|
+  Post.create(post)
+end
+
+@artists = [
   {instagram_handle: "@blackworkers"},
   {instagram_handle: "@gerfer_tattoo"},
   {instagram_handle: "@rockydarkroads"},
@@ -1255,3 +1259,6 @@ artist_data = [
   {instagram_handle: "@ericstricker"},
   {instagram_handle: "@matthew_houston"}
 ]
+@artists.each do |artist|
+  Artist.create(artist)
+end
