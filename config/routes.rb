@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     post '/sessions', to: 'sessions#create', as: "sessions"
     get '/logout', to: 'sessions#destroy', as: "logout"
 
+    get "/artists", to: "artists#index", as: "artists"
+    get "/artists/:id", to: "artists#show", as: "artist"
 
     get "/users", to: "users#index", as: "users"
     get "/users/new", to: "users#new", as: "new_user"
