@@ -1,0 +1,7 @@
+<h1> Artists</h1>
+<%= @artists each do |artist| %>
+    <div>
+      <h3 class="artistLink"><%= link_to artist.instagram_handle %></h3>
+    </div>
+  <br>
+<% end %>
