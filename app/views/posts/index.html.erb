@@ -1,0 +1,16 @@
+<div id="document">
+  <center><img src="http://i.imgur.com/GmDPeAh.png" title="source: imgur.com" /></center>
+    <center><h4> Instagram acccount curated by @caspermugridge </h4>
+
+      <% @posts.each do |post| %>
+          <div class="col-sm-12 col-md-4">
+            <div>
+              <%= image_tag post.image, height: 400, width: 400 unless post.image.blank?  %>
+              <div id="tatbtns">
+                <a href=<%= post.link %> class="btn btn-info">Learn More  </a>
+                <a href="" class="btn btn-success active">Add to Favorites </a>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>

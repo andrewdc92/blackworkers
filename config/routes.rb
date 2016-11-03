@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'hello_world', to: 'hello_world#index'
     root 'landing#index'
 
     get '/theidea', to: 'landing#idea', as: 'idea'
@@ -14,6 +13,7 @@ Rails.application.routes.draw do
     get "/artists/:id", to: "artists#show", as: "artist"
 
     get "/users", to: "users#index", as: "users"
+    get "/posts", to: "posts#index", as: "posts"
     get "/users/new", to: "users#new", as: "new_user"
     get "/users/:id", to:"users#show", as: "user"
     post "/users", to: "users#create"
