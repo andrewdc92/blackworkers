@@ -3,7 +3,9 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @posts = current_user.favorite_posts
   end
+
 
   def new
     @user = User.new

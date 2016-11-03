@@ -10,7 +10,8 @@
                 <div id="tatbtns">
                   <p> <%= post.Instagram %> </p>
                   <a href=<%= post.link %> class="btn btn-info">Learn More  </a>
-                  <a href="" class="btn btn-success active">Add to Favorites </a>
+                   <button type="button" class="btn btn-success"><%= link_to 'Take a look', favorite_posts_path(post_id: post),  style: 'color:#FFFFFF', method: :post %></button>
+                    <!-- change 'take a look back to 'favorite' when model relationship is complete -->
                 </div>
               </div>
             </div>

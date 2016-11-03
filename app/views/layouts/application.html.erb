@@ -12,7 +12,7 @@
       <nav class="navbar navbar-light bg-faded">
     <a class="navbar-brand" href="/"><img src="http://i.imgur.com/mjrYMQes.png"></a>
     <ul class="nav navbar-nav">
-      
+
       <% if current_user %>
       <li class="nav-item">
         <a class="nav-link" <%= link_to "Profile", user_path(current_user)%></a>
@@ -38,8 +38,8 @@
         </div>
       </li>
     </ul>
-    <form class="form-inline float-xs-right">
-      <input class="form-control" type="text" placeholder="Search">
+    <form class="form-inline float-xs-right" name="search" action="/posts" method='get'>
+      <input class="search-input" type="text" placeholder="Search">
       <button class="btn btn-outline-success" type="submit">Search</button>
     </form>
   </nav>

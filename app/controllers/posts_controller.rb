@@ -8,5 +8,6 @@ class PostsController < ApplicationController
     @post = Post.find_by_id(params[:id])
   end
 
-  
+
+
 end
