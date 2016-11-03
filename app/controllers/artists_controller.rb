@@ -2,6 +2,8 @@ class ArtistsController < ApplicationController
 
   def index
     @artists = Artist.all
+    @posts = Post.all
+
   end
 
   def new
