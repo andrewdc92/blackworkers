@@ -1,8 +1,11 @@
-<div>
+<center><div class="m-x-auto newuser" style="width: 400px;"><center>
+<div class="card">
+  <div class="card-block">
   <% if @user.id == current_user.id %>
 
-  <%= @user.full_name%>g
+  <h2><%= @user.full_name%></h2>
   <br>
+  <h3>Favorite Artists:</h3>
   <br>
   Joined <%= @user.created_at.localtime.to_formatted_s(:long_ordinal) %>
   <% if @user == current_user %>
@@ -11,7 +14,6 @@
   <% end %>
 
   <br>
-  <h2>Favorite Artists:</h2>
-
-
+  </div>
+</div>
 </div>
