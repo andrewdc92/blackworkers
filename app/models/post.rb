@@ -4,4 +4,8 @@ class Post < ApplicationRecord
   has_many :favorites, as: :favorited
   has_many :fans, through: :favorites, source: :user
   belongs_to :artist
-end
+
+  def self.search(search)
+    where("Instagram ILIKE ?" ,"%#{search}%")
+  end
+  end
