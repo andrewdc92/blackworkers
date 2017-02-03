@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:show, :edit, :update, :destroy]
+
 
   def index
     @posts = Post.all.order(created_at: :desc)
@@ -6,14 +9,34 @@ class PostsController < ApplicationController
 
     @posts = Post.where(Instagram: params[:search])
     # render "posts/show.html.erb"
-  else
-    @posts = Post.all.order("created_at DESC")
+    else
+      @posts = Post.all.order("created_at DESC")
+    end
   end
-end
 
   def show
     @post = Post.find_by_id(params[:id])
 
+  end
+
+
+  def favorites
+    @posts = current_user.favorite_posts
+  end
+
+private
+
+  def set_post
+    @post = Post.find_by(id: params[:id])
+  end
+
+  def post_params
+   params.require(:post).permit(:image, :link, :user_id, :artist_id, :Instagram)
+  end
+
+  def correct_user
+    @post = current_user.posts.find_by(id: params[:id])
+    redirect_to posts_path, notice: "Not authorized to edit this post" if @post.nil?
   end
 
 end

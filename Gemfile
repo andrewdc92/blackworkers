@@ -41,7 +41,6 @@ gem 'httparty'
 gem 'instagram'
 gem 'haml'
 gem 'figaro'
-gem 'binding_of_caller'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -57,7 +56,6 @@ group :development, :test do
 end
 
 group :development do
-  gem "better_errors"
 
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
