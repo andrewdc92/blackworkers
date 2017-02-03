@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-    root 'landing#index'
+    root 'posts#index'
 
     get '/theidea', to: 'landing#idea', as: 'idea'
     get '/theproject', to: 'landing#project', as: 'project'
