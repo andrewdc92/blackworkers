@@ -13,11 +13,11 @@
             <p><%= post.Instagram %></p>
             <a href=<%= post.link %> class="btn btn-info">Learn More</a>
 
-            <% unless current_user.favorite_posts.exists?(id: @post.id) %>
+            <% unless current_user.favorite_posts.exists?(id: post.id) %>
               <button type="button" class="btn btn-success">
                 <%= link_to(
                   'Favorite',
-                  favorite_posts_path(@post),
+                  favorite_posts_path(post),
                   style: 'color:#FFFFFF',
                   method: :post,
                 ) %>
@@ -26,7 +26,7 @@
               <button type="button" class="btn btn-danger">
                 <%= link_to(
                   'Delete',
-                  favorite_post_path(@post),
+                  favorite_post_path(post),
                   style: 'color:#FFFFFF',
                   method: :delete
                 ) %>
