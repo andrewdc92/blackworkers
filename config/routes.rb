@@ -4,7 +4,6 @@ Rails.application.routes.draw do
     get '/theidea', to: 'landing#idea', as: 'idea'
     get '/theproject', to: 'landing#project', as: 'project'
 
-
     get '/login', to: 'sessions#new', as: "login"
     post '/sessions', to: 'sessions#create', as: "sessions"
     get '/logout', to: 'sessions#destroy', as: "logout"
@@ -21,7 +20,8 @@ Rails.application.routes.draw do
     get "/users/:id/edit", to: "users#edit", as: "edit_user"
     patch "/users/:id", to: "users#update"
     delete "/users/:id", to: "users#destroy", as: "destroy_user"
-    resources :favorite_posts, only: [:create, :destroy]
+    
+    resources :favorite_posts
 
 
 

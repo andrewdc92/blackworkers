@@ -16,7 +16,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by_id(params[:id])
-
+    @user = User.find_by_id(@post.user_id)
   end
 
 
@@ -28,10 +28,6 @@ private
 
   def set_post
     @post = Post.find_by(id: params[:id])
-  end
-
-  def post_params
-   params.require(:post).permit(:image, :link, :user_id, :artist_id, :Instagram)
   end
 
   def correct_user
